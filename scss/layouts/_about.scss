@@ -1,0 +1,118 @@
+.about-section {
+  position: relative;
+
+  &::before {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+      background-image: url("../Images/Star-Medium.png");
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 40px;
+      right: 73px;
+      top: 0;
+      animation: bounce 2s infinite;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 64px;
+      font-family: Play, sans-serif;
+      position: relative;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 28px;
+  }
+
+  &__list {
+    margin-top: -20px;
+    @media screen and (min-width: $bp-desktop) {
+      width: 540px;
+      margin-top: -80px;
+    }
+  }
+
+  &__p-up {
+    margin-bottom: 16px;
+    @media screen and (min-width: $bp-desktop) {
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    &::after {
+      display: none;
+      @media screen and (min-width: $bp-desktop) {
+        display: block;
+        background-image: url("../Images/Star-small.png");
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        right: 105px;
+        animation: bounce 2s infinite;
+      }
+    }
+  }
+
+  &__p-down {
+    margin-bottom: 0;
+    line-height: 1.7;
+
+    &::before {
+      background-image: url("../Images/Star-big.png");
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 40px;
+      height: 40px;
+      right: 22px;
+      bottom: 0;
+      animation: spin 2s infinite;
+
+      @media screen and (min-width: $bp-desktop) {
+        width: 64px;
+        height: 64px;
+        right: 395px;
+        bottom: 90px;
+        animation: bounce 2s infinite;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__image {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      border-radius: 50%;
+      display: block;
+
+      &--up {
+        position: absolute;
+        top: -56px;
+        right: 268px;
+        max-width: 335px;
+        max-height: 328px;
+      }
+
+      &--down {
+        position: absolute;
+        top: 270px;
+        right: 92px;
+        max-width: 343px;
+        max-height: 328px;
+      }
+    }
+  }
+}
