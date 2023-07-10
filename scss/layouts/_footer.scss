@@ -1,0 +1,140 @@
+.footer {
+  text-align: center;
+  background-image: url("../Images/footer-vector.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: var(--color-brand-dark);
+  padding: 32px 0 66px 0;
+  @media screen and (min-width: $bp-desktop) {
+    padding: 56px;
+  }
+  &::after {
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+      background-image: url("../Images/footer.png");
+      content: "";
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 260px;
+      height: 213px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 186px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      gap: 186px;
+    }
+  }
+
+  &__menu {
+    white-space: nowrap;
+
+    &--words {
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 16px;
+      }
+    }
+    @media screen and (min-width: $bp-tablet) {
+      &--words {
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column-reverse;
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: column;
+    }
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      gap: 186px;
+    }
+  }
+
+  &__address-list {
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+      margin-bottom: 16px;
+
+      &--word {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__address-contact,
+  &__link {
+    color: var(--color-light);
+    text-decoration: none;
+    font-size: 16px;
+
+    &:hover {
+      color: var(--color-brand-light);
+      transition: color 0.2s;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    @media screen and (min-width: $bp-desktop) {
+      gap: 24px;
+    }
+  }
+
+  &__icon {
+    fill: var(--color-light);
+
+    &:hover {
+      transition: fill 0.2s;
+      fill: var(--color-brand-light);
+    }
+  }
+
+  &__address-info {
+    text-decoration: none;
+    color: var(--color-light);
+    font-size: 16px;
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--color-brand-light);
+      transition: color 0.2s;
+    }
+  }
+
+  &__address-p {
+    color: var(--color-secondary);
+    font-size: 13px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+}
