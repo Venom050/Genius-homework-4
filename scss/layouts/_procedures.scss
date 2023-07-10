@@ -1,0 +1,44 @@
+.procedures-section {
+  &__container {
+    overflow: hidden;
+  }
+
+  &__slider {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  &__list {
+    margin-bottom: 32px;
+  }
+}
+
+.slider-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  fill: var(--color-brand-dark);
+  border: 1px solid var(--color-brand-dark);
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  @media screen and (min-width: $bp-tablet) {
+    display: flex;
+  }
+
+  &.next {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    fill: var(--color-light);
+    background-color: var(--color-brand-light);
+    border: 1px solid var(--color-light);
+    transition: background-color 0.2s;
+  }
+}
