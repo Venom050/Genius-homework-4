@@ -1,0 +1,21 @@
+@import "./utils/variables";
+@import "./utils/util";
+@import "./utils/politics";
+@import "./utils/section-title";
+
+@import "./components/base";
+@import "./components/button";
+@import "./components/input";
+@import "./components/pagination";
+@import "./components/card";
+@import "./components/mobile-menu";
+
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/about";
+
+@import "./layouts/why";
+@import "./layouts/procedures";
+@import "./layouts/contact";
+@import "./layouts/footer";
+@import "./components/modal";
